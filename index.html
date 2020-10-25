@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+
+@keyframes example1 {
+  from {
+    background-color: red;
+  /* transform: rotate(0deg); */
+  transform: translateX(0);
+}
+  to {
+    background-color: yellow;
+    /* transform: rotate(45deg); */
+    transform: translateX(200px);
+
+}
+}
+@keyframes rotation {
+  from {
+    background-color: red;
+  transform: rotate(0deg);
+}
+  to {
+    background-color: yellow;
+    transform: rotate(45deg);
+
+}
+}
+/* The element to apply the animation to */
+p {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: rotation;
+  animation-duration: 4s;
+}
+.line{
+  width: 200%;
+  position: absolute;
+  border-top: 5px dashed #fff;
+  margin: 20px;
+  bottom: 10%;
+}
+.ball{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #f2d648;
+    position: absolute;
+    /* margin-top: 50%; */
+    bottom: 15%;
+    animation-name: bounce;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;  
+    -webkit-animation: bounce 3s infinite;
+}
+@-webkit-keyframes bounce {
+0% {
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+}
+16% {
+    top: 190px;
+    -webkit-animation-timing-function: ease-out;
+}
+32% {
+    top: 50px;
+    -webkit-animation-timing-function: ease-in;
+}
+48% {
+    top: 190px;
+    -webkit-animation-timing-function: ease-out;
+}
+62% {
+    top: 100px;
+    -webkit-animation-timing-function: ease-in;
+}
+78% {
+    top: 190px;
+    -webkit-animation-timing-function: ease-out;
+}
+90% {
+    top: 150px;
+    -webkit-animation-timing-function: ease-in;
+}
+100% {
+    top: 190px;
+    -webkit-animation-timing-function: ease-out;
+     }
+}
+
+/*////////////////// @keyframes move {*/
+@-webkit-keyframes move {
+    0%, 20%, 40%{ 
+      bottom: 15%;
+      left: 10%;
+      -webkit-animation-timing-function: ease-in;
+    }
+    20%{
+      bottom: 15%;
+      left: 20%;
+      -webkit-animation-timing-function: ease-in;
+    }
+    40%{
+      bottom: 15%;
+      left: 35%;
+      -webkit-animation-timing-function: ease-in;
+    }
+    60%{
+      bottom: 15%;
+      left: 50%;
+      -webkit-animation-timing-function: ease-in;
+
+    }
+    100%{
+      bottom: 15%;
+      left: 70%;
+      -webkit-animation-timing-function: ease-in;
+
+    }
+    
+} 
+   </style>
+</head>
+<body style='background-color: rgb(13, 15, 15);'>
+    <p>sda</p>
+    <div class="line"></div>
+    <div class="ball"></div>
+</body>
+</html>
